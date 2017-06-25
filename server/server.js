@@ -10,6 +10,8 @@ var {User}=require('./models/user');
 
 var app= express();
 
+var {ObjectID}=require('mongodb');
+
 app.use(bodyParser.json());
 
 app.post('/todos',(req,res)=>{
@@ -30,6 +32,22 @@ app.get('/todos',(req,res)=>{
   },(e)=>{
     res.status(400).send(e);
   })
+});
+
+app.get('/todos/:id',(req,res)=>{
+  var id = req.params.id;
+  if (!ObjectID.isValid(id)) {
+     return res.status(404).send();
+  }
+
+  Todo.findById(id).then((todos)=>{
+    if (!todos) {
+      res.status(404).send();
+    }
+    res.send({todos});
+  },(e)=>{
+    res.status(400).send();
+  });
 });
 
 app.listen(3000,()=>{
