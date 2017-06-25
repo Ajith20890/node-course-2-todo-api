@@ -20,6 +20,10 @@ db.collection('Users').find({Name:'Ajith'}).toArray().then((result)=>{
   console.log('Error is :',err);
 });
 
+// db.collection('todos').find().toArray().then((docs)=>{
+//    console.log('Todos',docs);
+//  });
+
 
 // db.collection('Todos').find({_id:new ObjectID('5940d5234e9e0a0e2c632c0e')}).toArray().then((docs)=>{
 //   console.log('Todos');
