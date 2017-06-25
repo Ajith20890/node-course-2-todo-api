@@ -2,10 +2,7 @@ var mongoose=require('mongoose');
 
 mongoose.Promise=global.Promise;
 
-mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost:27017/TodoaApp' );
-
-//'mongodb://localhost:27017/TodoaApp'
-
+mongoose.connect(process.env.MONGODB_URI || 'mongodb://ajithk:Ajith2089020890@ds139082.mlab.com:39082/ak20890' );
 
 module.exports={
   mongoose
