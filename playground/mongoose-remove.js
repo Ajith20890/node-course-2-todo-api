@@ -14,6 +14,6 @@ const {user1} = require('./../server/models/user');
 //   console.log(doc);
 // });
 
-Todo.findOneAndRemove({_id:'59500e76836bab64bf2333a6'}).then((doc)=>{
-  console.log(doc);
-});
+// Todo.findOneAndRemove({_id:'59500e76836bab64bf2333a6'}).then((doc)=>{
+//   console.log(doc);
+// });
